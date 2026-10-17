@@ -1,6 +1,6 @@
 /**
  * ========================================================
- * FER PIZZ — MOTOR INTERACTIVO Y EDITORIAL (CARTAGENA)
+ * FORNO ARTIGIANO — MOTOR INTERACTIVO Y EDITORIAL
  * Precios Oficiales del Menú, Toques Mostaza & Animaciones Espectaculares
  * ========================================================
  */
@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  // 1. CATÁLOGO OFICIAL CON PRECIOS EXACTOS DEL MENÚ DE FER PIZZ (CARTAGENA)
+  // 1. CATÁLOGO OFICIAL CON PRECIOS EXACTOS DEL MENÚ DE FORNO ARTIGIANO
   const DEFAULT_MENU = [
     {
       id: 'jamon-queso',
@@ -106,7 +106,7 @@
       name: 'Enchulada',
       category: 'especial',
       badge: '✦ ESPECIALIDAD',
-      desc: 'La joya indiscutible de Fer Pizz: tocineta crujiente, maíz tierno dulce, pollo especiado, jamón selecto y la salsa especial de la casa.',
+      desc: 'La joya indiscutible de Forno Artigiano: tocineta crujiente, maíz tierno dulce, pollo especiado, jamón selecto y la salsa especial de la casa.',
       available: true,
       featured: true,
       prices: {
@@ -212,10 +212,10 @@
   ];
 
   // CONSTANTES DEL NEGOCIO
-  const WHATSAPP_PHONE = '573162446724';
-  const STORAGE_KEY_MENU = 'ferpizz_menu_v3';
-  const STORAGE_KEY_CART = 'ferpizz_cart_v3';
-  const ADMIN_PASSWORD_DEFAULT = 'ferpizz2026';
+  const WHATSAPP_PHONE = '15550192834';
+  const STORAGE_KEY_MENU = 'forno_menu_v1';
+  const STORAGE_KEY_CART = 'forno_cart_v1';
+  const ADMIN_PASSWORD_DEFAULT = 'forno2026';
 
   // ESTADO GLOBAL
   let activeMenu = [];
@@ -842,11 +842,11 @@
     const mapElement = document.getElementById('leafletMap');
     if (!mapElement || typeof L === 'undefined') return;
 
-    const cartagenaCenter = [10.4236, -75.5378];
+    const defaultDeliveryCenter = [10.4236, -75.5378];
 
     try {
       leafletMap = L.map('leafletMap', {
-        center: cartagenaCenter,
+        center: defaultDeliveryCenter,
         zoom: 14,
         zoomControl: true,
         attributionControl: false
@@ -879,12 +879,12 @@
         iconAnchor: [16, 32]
       });
 
-      mapMarker = L.marker(cartagenaCenter, {
+      mapMarker = L.marker(defaultDeliveryCenter, {
         draggable: true,
         icon: customPin
       }).addTo(leafletMap);
 
-      mapMarker.bindPopup('<b>Entrega Fer Pizz Cartagena</b><br>Arrastra este alfiler a tu puerta.').openPopup();
+      mapMarker.bindPopup('<b>Entrega Forno Artigiano</b><br>Arrastra este alfiler a tu puerta.').openPopup();
 
       mapMarker.on('dragend', function () {
         const pos = mapMarker.getLatLng();
@@ -907,7 +907,7 @@
     currentCoordinates = { lat, lng };
     const coordsDisplay = document.getElementById('coordsText');
     if (coordsDisplay) {
-      coordsDisplay.textContent = `${lat.toFixed(5)}° N, ${lng.toFixed(5)}° W (Cartagena)`;
+      coordsDisplay.textContent = `${lat.toFixed(5)}° N, ${lng.toFixed(5)}° W (Punto Seleccionado)`;
     }
   }
 
@@ -976,7 +976,7 @@
     const googleMapsUrl = `https://maps.google.com/?q=${currentCoordinates.lat.toFixed(5)},${currentCoordinates.lng.toFixed(5)}`;
 
     const message = 
-`🍕 *NUEVO PEDIDO — FER PIZZ CARTAGENA*
+`🍕 *NUEVO PEDIDO — FORNO ARTIGIANO*
 ──────────────────────────────
 👤 *Cliente:* ${name}
 📞 *Teléfono:* ${phone}
@@ -987,12 +987,12 @@ ${notes ? `📝 *Notas:* ${notes}\n` : ''}────────────�
 ${itemsText}──────────────────────────────
 💰 *TOTAL ESTIMADO:* ${formatCOP(subtotal)} COP
 ──────────────────────────────
-“UNA IDEA QUE NACIÓ PARA SERVIR”
+“TRADICIÓN, FUEGO & PASIÓN ARTESANAL”
 ¡Horno encendido! 🔥 Gracias por preferirnos.`;
 
     const waUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank');
-    showToast('✓ Abriendo WhatsApp oficial de Fer Pizz...');
+    showToast('✓ Abriendo WhatsApp oficial de Forno Artigiano...');
   }
 
   // 7. FILTROS DE CATEGORÍA CON TRANSICIÓN GSAP
@@ -1418,7 +1418,7 @@ ${itemsText}──────────────────────�
 
     localStorage.setItem(STORAGE_KEY_MENU, JSON.stringify(activeMenu));
     renderMenuGrid();
-    showToast('✓ Carta y precios actualizados en Fer Pizz');
+    showToast('✓ Carta y precios actualizados en Forno Artigiano');
   }
 
   function resetMenuToDefaults() {

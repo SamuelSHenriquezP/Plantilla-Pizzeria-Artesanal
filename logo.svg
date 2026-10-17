@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <!-- Circular Paths for Arched Text -->
+    <path id="textArcTop" d="M 95 300 A 205 205 0 0 1 505 300" fill="none" />
+    <path id="textArcBottom" d="M 505 300 A 205 205 0 0 1 95 300" fill="none" />
+
+    <!-- Linear & Radial Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD968" />
+      <stop offset="100%" stop-color="#EDB936" />
+    </linearGradient>
+
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8262D" />
+      <stop offset="100%" stop-color="#BD2026" />
+    </linearGradient>
+
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A1417" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Base Circle / Outer Wine Ring -->
+  <circle cx="300" cy="300" r="290" fill="#4A1417" />
+  <circle cx="300" cy="300" r="280" fill="#F8F1E2" stroke="#EDB936" stroke-width="3" />
+
+  <!-- Bold Crimson Inner Band -->
+  <circle cx="300" cy="300" r="268" fill="none" stroke="url(#crimsonGrad)" stroke-width="26" />
+  <circle cx="300" cy="300" r="253" fill="none" stroke="#F8F1E2" stroke-width="2" />
+  <circle cx="300" cy="300" r="248" fill="none" stroke="#EDB936" stroke-width="2.5" stroke-dasharray="6,5" />
+
+  <!-- Cream Center Disc -->
+  <circle cx="300" cy="300" r="244" fill="#F8F1E2" />
+
+  <!-- TOP DECORATION: Wood-Fired Oven & Flame Symbol -->
+  <g transform="translate(300, 150)">
+    <!-- Stylized Oven Dome -->
+    <path d="M -50 42 A 50 46 0 0 1 50 42 L 50 46 L -50 46 Z" fill="#4A1417" />
+    <path d="M -42 42 A 42 38 0 0 1 42 42 Z" fill="#BD2026" />
+    <!-- Oven Mouth / Chamber -->
+    <path d="M -24 42 A 24 24 0 0 1 24 42 Z" fill="#4A1417" />
+    <!-- Golden Flame -->
+    <path d="M 0 18 Q 8 28 8 36 Q 8 42 0 42 Q -8 42 -8 36 Q -8 28 0 18 Z" fill="url(#goldGrad)" />
+    <circle cx="0" cy="36" r="3.5" fill="#FFFDF9" />
+    <!-- Symmetrical Wheat Sprigs -->
+    <!-- Left Wheat -->
+    <g transform="translate(-75, 20) rotate(-22)">
+      <path d="M0,25 Q-2,0 0,-25" stroke="#EDB936" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      <ellipse cx="-6" cy="-15" rx="4" ry="7" transform="rotate(-30 -6 -15)" fill="url(#goldGrad)" />
+      <ellipse cx="6" cy="-10" rx="4" ry="7" transform="rotate(30 6 -10)" fill="url(#goldGrad)" />
+      <ellipse cx="-7" cy="0" rx="4" ry="7" transform="rotate(-30 -7 0)" fill="url(#goldGrad)" />
+      <ellipse cx="7" cy="5" rx="4" ry="7" transform="rotate(30 7 5)" fill="url(#goldGrad)" />
+      <ellipse cx="0" cy="-25" rx="3.5" ry="6" fill="url(#goldGrad)" />
+    </g>
+    <!-- Right Wheat -->
+    <g transform="translate(75, 20) scale(-1, 1) rotate(-22)">
+      <path d="M0,25 Q-2,0 0,-25" stroke="#EDB936" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      <ellipse cx="-6" cy="-15" rx="4" ry="7" transform="rotate(-30 -6 -15)" fill="url(#goldGrad)" />
+      <ellipse cx="6" cy="-10" rx="4" ry="7" transform="rotate(30 6 -10)" fill="url(#goldGrad)" />
+      <ellipse cx="-7" cy="0" rx="4" ry="7" transform="rotate(-30 -7 0)" fill="url(#goldGrad)" />
+      <ellipse cx="7" cy="5" rx="4" ry="7" transform="rotate(30 7 5)" fill="url(#goldGrad)" />
+      <ellipse cx="0" cy="-25" rx="3.5" ry="6" fill="url(#goldGrad)" />
+    </g>
+  </g>
+
+  <!-- Arched Top Text: PIZZERIA ARTIGIANALE -->
+  <text font-family="'Playfair Display', 'Bitter', Georgia, serif" font-size="25" font-weight="800" fill="#4A1417" letter-spacing="9">
+    <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+      PIZZERIA ARTIGIANALE
+    </textPath>
+  </text>
+
+  <!-- CENTRAL RIBBON BANNER -->
+  <g filter="url(#subtleShadow)">
+    <!-- Ribbon Base Shape -->
+    <rect x="42" y="246" width="516" height="108" fill="#FFFDF9" rx="6" stroke="#4A1417" stroke-width="5" />
+    <!-- Fine Crimson Accent Lines inside ribbon -->
+    <line x1="52" y1="256" x2="548" y2="256" stroke="#BD2026" stroke-width="3" />
+    <line x1="52" y1="344" x2="548" y2="344" stroke="#BD2026" stroke-width="3" />
+    <!-- Small Diamond End Accents -->
+    <polygon points="56,300 62,294 68,300 62,306" fill="#EDB936" />
+    <polygon points="544,300 538,294 532,300 538,306" fill="#EDB936" />
+  </g>
+
+  <!-- MAIN BRAND WORDMARK: FORNO ARTIGIANO -->
+  <text x="300" y="304" font-family="'Playfair Display', 'Bitter', 'Times New Roman', Georgia, serif" font-size="52" font-weight="900" fill="#BD2026" text-anchor="middle" letter-spacing="4">
+    FORNO
+  </text>
+  <text x="300" y="337" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="800" fill="#4A1417" text-anchor="middle" letter-spacing="10">
+    ARTIGIANO
+  </text>
+
+  <!-- BOTTOM DECORATION: Artisanal Pizza Slice Icon -->
+  <g transform="translate(300, 420)">
+    <!-- Warm Pizza Crust Arc -->
+    <path d="M -46 -15 Q 0 -22 46 -15 L 0 38 Z" fill="#EDB936" stroke="#4A1417" stroke-width="3" />
+    <!-- Melted Cheese Layer -->
+    <path d="M -38 -12 Q 0 -18 38 -12 L 0 32 Z" fill="#FCD968" />
+    <!-- Basil Leaf Accents -->
+    <ellipse cx="-12" cy="0" rx="6" ry="3.5" transform="rotate(-25 -12 0)" fill="#3E7B27" />
+    <ellipse cx="14" cy="8" rx="5" ry="3" transform="rotate(35 14 8)" fill="#3E7B27" />
+    <!-- Pepperoni / Tomato Slice Accents -->
+    <circle cx="0" cy="-3" r="6.5" fill="#BD2026" />
+    <circle cx="-16" cy="-7" r="4.5" fill="#BD2026" />
+    <circle cx="16" cy="-4" r="5" fill="#BD2026" />
+    <circle cx="2" cy="18" r="4" fill="#BD2026" />
+  </g>
+
+  <!-- Arched Bottom Text: FORNO A LEGNA -->
+  <text font-family="'Inter', -apple-system, sans-serif" font-size="21" font-weight="700" fill="#4A1417" letter-spacing="8">
+    <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">
+      ✦ FORNO A LEGNA ✦
+    </textPath>
+  </text>
+
+  <!-- Star accents -->
+  <polygon points="120,380 123,388 132,388 125,393 128,401 120,396 112,401 115,393 108,388 117,388" fill="#EDB936" />
+  <polygon points="480,380 483,388 492,388 485,393 488,401 480,396 472,401 475,393 468,388 477,388" fill="#EDB936" />
+</svg>
