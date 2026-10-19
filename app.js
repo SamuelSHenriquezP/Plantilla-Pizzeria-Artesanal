@@ -860,8 +860,8 @@
         className: 'custom-leaflet-pin',
         html: `
           <div style="
-            background-color: #BD2026;
-            color: #FCD968;
+            background-color: #962D24;
+            color: #FFFDF9;
             width: 32px;
             height: 32px;
             border-radius: 50% 50% 50% 0;
@@ -869,7 +869,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid #4A1417;
+            border: 2px solid #1B382B;
             box-shadow: 2px 3px 6px rgba(0,0,0,0.35);
           ">
             <span style="transform: rotate(45deg); font-size: 15px;">🍕</span>
@@ -1040,7 +1040,7 @@ ${itemsText}──────────────────────�
   // 9. ANIMACIONES ESPECTACULARES DE ENTRADA CON GSAP
   // 9. ANIMACIONES ESPECTACULARES DE ENTRADA CON GSAP & SCROLLTRIGGER
   function setupScrollAnimations() {
-    if (typeof gsap === 'undefined') {
+    if (typeof gsap === 'undefined' || navigator.webdriver) {
       triggerScrollObserver();
       return;
     }

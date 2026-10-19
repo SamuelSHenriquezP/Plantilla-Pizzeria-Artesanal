@@ -1,22 +1,23 @@
 /* ========================================================
-   FER PIZZ (CARTAGENA) — SISTEMA EDITORIAL CON TOQUES MOSTAZA & ROJO
-   Diseño Fluido Edge-to-Edge, Sin Bordes Enclaustrados, Adaptado a Móviles
+   FORNO ARTIGIANO (PIZZERIA ARTIGIANALE) — SISTEMA EDITORIAL ITALIANO
+   Paleta: Verde Albahaca / Oliva Trattoria, Pomodoro San Marzano & Harina Rústica
    ======================================================== */
 
 :root {
-  /* PALETA ORIGINAL FER PIZZ & EDITORIAL DA MARIA */
-  --mustard-ferpizz: #FCD968;      /* Mostaza más claro y radiante (artesanal) */
-  --mustard-deep: #EDB936;         /* Mostaza tostado para bordes y sombras */
-  --accent-crimson: #BD2026;       /* Rojo característico Fer Pizz */
-  --red-bright: #D8262D;           /* Rojo encendido para botones y llamadas */
-  --ink-wine: #4A1417;             /* Bordó profundo / Vino del logo */
-  --bg-canvas: #F8F1E2;            /* Fondo crema cálido y elegante */
-  --bg-card: #F1E5D0;              /* Papel crema con profundidad para tarjetas */
-  --ink-charcoal: #1A1615;         /* Tinta offset oscura */
-  --ink-muted: #5C544F;            /* Tinta secundaria */
-  --border-paper: #D9CEBF;         /* Líneas sutiles de prensa */
-  --border-mustard: #E8C15A;       /* Líneas mostaza clara */
-  --white-pure: #FFFFFF;
+  /* PALETA ITALIANA NAPOLETANA — VERDE OLIVA / BASILICO & POMODORO SAN MARZANO */
+  --mustard-ferpizz: #264D3B;      /* Verde Basilico Italiano Profundo */
+  --mustard-deep: #1B382B;         /* Verde Oliva Oscuro / Trattoria */
+  --accent-crimson: #962D24;       /* Rojo Pomodoro San Marzano Auténtico */
+  --red-bright: #BA382C;           /* Terracota Culinario Cálido */
+  --ink-wine: #1B382B;             /* Verde Bosque Trattoria para Bordes y Encabezados */
+  --bg-canvas: #F7F4EC;            /* Papel Lino Rústico / Harina Artesanal */
+  --bg-card: #EFE8DC;              /* Crema Masa Horneada para Tarjetas */
+  --ink-charcoal: #1A1615;         /* Tinta Offset Oscura / Carbón de Horno */
+  --ink-muted: #5C544F;            /* Tinta Secundaria */
+  --border-paper: #D6CABE;         /* Líneas sutiles de prensa */
+  --border-mustard: #3A6952;       /* Verde albahaca medio para bordes */
+  --sage-soft: #E2ECE5;            /* Verde Salvia suave para píldoras y acentos */
+  --white-pure: #FFFDF9;           /* Blanco puro suave */
 
   /* TIPOGRAFÍAS */
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -49,8 +50,8 @@ body.newspaper-theme.full-viewport {
   font-family: var(--font-sans);
   background-color: var(--bg-canvas);
   background-image: 
-    radial-gradient(rgba(252, 217, 104, 0.22) 1.5px, transparent 0),
-    radial-gradient(rgba(74, 20, 23, 0.035) 1px, transparent 0);
+    radial-gradient(rgba(38, 77, 59, 0.08) 1.5px, transparent 0),
+    radial-gradient(rgba(150, 45, 36, 0.04) 1px, transparent 0);
   background-size: 32px 32px, 16px 16px;
   min-height: 100vh;
   padding: 0;
@@ -109,7 +110,7 @@ body.newspaper-theme.full-viewport {
 }
 
 .topbar-sep {
-  color: var(--mustard-ferpizz);
+  color: var(--red-bright);
   font-size: 0.7rem;
 }
 
@@ -128,7 +129,7 @@ body.newspaper-theme.full-viewport {
   font-weight: 800;
   font-size: 0.86rem;
   letter-spacing: 0.08em;
-  color: var(--mustard-ferpizz);
+  color: #FFFDF9;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -140,7 +141,7 @@ body.newspaper-theme.full-viewport {
 }
 
 .topbar-contact-link:hover {
-  color: var(--mustard-ferpizz);
+  color: var(--sage-soft);
   text-decoration: underline;
 }
 
@@ -205,8 +206,8 @@ body.newspaper-theme.full-viewport {
 }
 .pill-btn-subtle:hover {
   border-color: var(--mustard-deep);
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
+  background-color: var(--sage-soft);
+  color: var(--mustard-deep);
 }
 
 /* BOTÓN DE PEDIDO CON ANIMACIÓN */
@@ -217,7 +218,7 @@ body.newspaper-theme.full-viewport {
   padding: 10px 22px;
   border-radius: 9999px;
   border: 2px solid var(--ink-wine);
-  background: linear-gradient(135deg, var(--accent-crimson), #9e141a);
+  background: linear-gradient(135deg, var(--accent-crimson), #741E18);
   color: var(--white-pure);
   font-family: var(--font-sans);
   font-size: 0.78rem;
@@ -225,18 +226,18 @@ body.newspaper-theme.full-viewport {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: 3px 3px 0 var(--mustard-ferpizz);
+  box-shadow: 3px 3px 0 var(--mustard-deep);
   transition: all var(--trans-bounce);
 }
 
 .pill-btn-cart:hover {
-  background: linear-gradient(135deg, #a6161c, var(--ink-wine));
+  background: linear-gradient(135deg, var(--red-bright), var(--accent-crimson));
   transform: translateY(-2px) scale(1.03);
   box-shadow: 4px 4px 0 var(--mustard-deep);
 }
 
 .cart-spin-icon {
-  color: var(--mustard-ferpizz);
+  color: #FFFDF9;
   font-size: 1.1rem;
   display: inline-block;
   animation: spinSlow 12s linear infinite;
@@ -249,8 +250,8 @@ body.newspaper-theme.full-viewport {
 
 .cart-badge-counter {
   font-variant-numeric: tabular-nums;
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
+  background-color: #FFFDF9;
+  color: var(--accent-crimson);
   padding: 1px 7px;
   border-radius: 9999px;
   font-weight: 900;
@@ -274,9 +275,9 @@ body.newspaper-theme.full-viewport {
   margin: 0 auto 12px;
   border-radius: 50%;
   padding: 6px;
-  background: radial-gradient(circle, var(--mustard-ferpizz) 45%, var(--bg-card) 100%);
-  border: 2px solid var(--accent-crimson);
-  box-shadow: 0 10px 28px rgba(74, 20, 23, 0.16);
+  background: radial-gradient(circle, var(--sage-soft) 45%, var(--bg-card) 100%);
+  border: 2.5px solid var(--accent-crimson);
+  box-shadow: 0 10px 28px rgba(27, 56, 43, 0.16);
   transition: transform var(--trans-bounce), box-shadow var(--trans-bounce);
   display: flex;
   align-items: center;
@@ -285,7 +286,7 @@ body.newspaper-theme.full-viewport {
 
 .logo-circle-ring:hover {
   transform: scale(1.06) rotate(2deg);
-  box-shadow: 0 14px 34px rgba(189, 32, 38, 0.28);
+  box-shadow: 0 14px 34px rgba(150, 45, 36, 0.28);
 }
 
 .official-logo-img {
@@ -308,17 +309,17 @@ body.newspaper-theme.full-viewport {
 }
 
 /* ========================================================
-   MARQUESINA INFINITA (MOSTAZA Y ROJO)
+   MARQUESINA INFINITA (TRATTORIA VERDE BOSQUE & POMODORO)
    ======================================================== */
 .marquee-mustard-wrapper {
   width: 100%;
-  border-top: 2.5px solid var(--ink-wine);
-  border-bottom: 2.5px solid var(--ink-wine);
+  border-top: 2.5px solid var(--accent-crimson);
+  border-bottom: 2.5px solid var(--accent-crimson);
   padding: 24px 0; /* Más aire en el segundo banner */
-  background-color: var(--mustard-ferpizz);
+  background-color: var(--mustard-deep);
   overflow: hidden;
   position: relative;
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.08), 0 4px 14px rgba(74, 20, 23, 0.08);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.12), 0 4px 14px rgba(27, 56, 43, 0.12);
 }
 
 .marquee-track {
@@ -343,12 +344,12 @@ body.newspaper-theme.full-viewport {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ink-wine);
+  color: #FAF5EB;
   padding-right: 36px;
 }
 
 .m-diamond {
-  color: var(--accent-crimson);
+  color: var(--red-bright);
   margin: 0 10px;
   font-size: 0.9rem;
 }
@@ -371,15 +372,15 @@ body.newspaper-theme.full-viewport {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
+  background-color: var(--sage-soft);
+  color: var(--mustard-deep);
   font-family: var(--font-sans);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 5px 12px;
-  border: 1px solid var(--ink-wine);
+  border: 1px solid var(--mustard-deep);
   margin-bottom: 16px;
 }
 .kicker-star {
@@ -446,7 +447,7 @@ body.newspaper-theme.full-viewport {
   padding: 10px 14px 6px 14px;
   margin: 4px 14px 6px 0;
   background-color: var(--accent-crimson);
-  color: var(--mustard-ferpizz);
+  color: var(--white-pure);
   font-weight: 900;
   text-transform: uppercase;
   border: 2px solid var(--ink-wine);
@@ -459,15 +460,15 @@ body.newspaper-theme.full-viewport {
   flex-wrap: wrap;
 }
 
-/* BOTÓN MOSTAZA SÓLIDO */
+/* BOTÓN VERDE ALBAHACA ARTESANAL */
 .btn-mustard-solid {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 16px 32px;
-  background: linear-gradient(135deg, var(--mustard-ferpizz), var(--mustard-deep));
-  color: var(--ink-wine);
-  border: 2px solid var(--ink-wine);
+  background: linear-gradient(135deg, #2A5A44, #1B382B);
+  color: var(--white-pure);
+  border: 2px solid var(--mustard-deep);
   font-family: var(--font-sans);
   font-size: 0.82rem;
   font-weight: 800;
@@ -480,9 +481,10 @@ body.newspaper-theme.full-viewport {
 }
 
 .btn-mustard-solid:hover {
-  background: var(--mustard-ferpizz);
+  background: #346E53;
+  color: var(--white-pure);
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--ink-wine);
+  box-shadow: 6px 6px 0 var(--mustard-deep);
 }
 
 .btn-editorial-outline {
@@ -506,7 +508,7 @@ body.newspaper-theme.full-viewport {
 .btn-editorial-outline:hover {
   background-color: var(--accent-crimson);
   color: var(--white-pure);
-  box-shadow: 3px 3px 0 var(--mustard-ferpizz);
+  box-shadow: 3px 3px 0 var(--mustard-deep);
 }
 
 /* COMPOSICIÓN FOTOGRÁFICA HERO */
@@ -568,7 +570,7 @@ body.newspaper-theme.full-viewport {
 }
 
 .seal-stars {
-  color: var(--mustard-deep);
+  color: var(--accent-crimson);
   font-size: 0.54rem;
   letter-spacing: 1.5px;
   line-height: 1;
@@ -597,14 +599,14 @@ body.newspaper-theme.full-viewport {
 
 .seal-pill {
   display: inline-block;
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
+  background-color: var(--sage-soft);
+  color: var(--mustard-deep);
   font-size: 0.52rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   padding: 1px 6px;
   border-radius: 9999px;
-  border: 1px solid var(--ink-wine);
+  border: 1px solid var(--mustard-deep);
   margin-top: 1px;
   line-height: 1.2;
 }
@@ -615,7 +617,7 @@ body.newspaper-theme.full-viewport {
   padding: 12px 12px 18px;
   box-shadow: 
     0 20px 45px rgba(26, 22, 21, 0.14),
-    5px 5px 0 var(--mustard-ferpizz);
+    5px 5px 0 var(--mustard-deep);
   transition: transform var(--trans-smooth);
 }
 
@@ -654,9 +656,9 @@ body.newspaper-theme.full-viewport {
    ======================================================== */
 .portions-guide-section {
   padding: 50px 0;
-  background-color: rgba(249, 195, 72, 0.14);
-  border-top: 1px solid var(--border-mustard);
-  border-bottom: 1px solid var(--border-mustard);
+  background-color: rgba(38, 77, 59, 0.05);
+  border-top: 1px solid var(--border-paper);
+  border-bottom: 1px solid var(--border-paper);
 }
 
 .section-title-wrap {
@@ -719,12 +721,12 @@ body.newspaper-theme.full-viewport {
 .portion-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent-crimson);
-  box-shadow: 0 12px 24px rgba(74, 20, 23, 0.1), 3px 3px 0 var(--mustard-ferpizz);
+  box-shadow: 0 12px 24px rgba(27, 56, 43, 0.12), 3px 3px 0 var(--mustard-deep);
 }
 
 .portion-card.active-featured {
   border: 2px solid var(--accent-crimson);
-  background-color: #FAF2E3;
+  background-color: #F4EFE6;
   box-shadow: 4px 4px 0 var(--mustard-deep);
 }
 
@@ -843,8 +845,8 @@ body.newspaper-theme.full-viewport {
 
 .filter-tab:hover {
   border-color: var(--accent-crimson);
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
+  background-color: var(--sage-soft);
+  color: var(--mustard-deep);
 }
 
 .filter-tab.active {
@@ -875,14 +877,14 @@ body.newspaper-theme.full-viewport {
 .pizza-editorial-card:hover {
   border-color: var(--accent-crimson);
   box-shadow: 
-    0 16px 32px rgba(74, 20, 23, 0.12),
-    4px 4px 0 var(--mustard-ferpizz);
+    0 16px 32px rgba(27, 56, 43, 0.12),
+    4px 4px 0 var(--mustard-deep);
   transform: translateY(-4px);
 }
 
 .pizza-editorial-card.card-featured {
   border: 2px solid var(--accent-crimson);
-  background-color: #FAF4E8;
+  background-color: #F8F5EE;
   box-shadow: 3px 3px 0 var(--mustard-deep);
 }
 
@@ -926,9 +928,9 @@ body.newspaper-theme.full-viewport {
   font-weight: 800;
   letter-spacing: 0.08em;
   padding: 3px 8px;
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
-  border: 1px solid var(--ink-wine);
+  background-color: var(--sage-soft);
+  color: var(--mustard-deep);
+  border: 1px solid var(--mustard-deep);
   text-transform: uppercase;
 }
 
@@ -987,7 +989,8 @@ body.newspaper-theme.full-viewport {
 
 .size-pill-btn:hover {
   border-color: var(--accent-crimson);
-  background-color: var(--mustard-ferpizz);
+  background-color: var(--sage-soft);
+  color: var(--mustard-deep);
 }
 
 .size-pill-btn.active {
@@ -1084,15 +1087,15 @@ body.newspaper-theme.full-viewport {
 }
 
 .btn-add-to-cart:hover {
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
-  border-color: var(--ink-wine);
-  box-shadow: 3px 3px 0 var(--accent-crimson);
+  background-color: #2F634B;
+  color: var(--white-pure);
+  border-color: var(--mustard-deep);
+  box-shadow: 3px 3px 0 var(--mustard-deep);
   transform: translate(-1px, -1px);
 }
 
 .out-of-stock-tag {
-  color: #a02020;
+  color: var(--accent-crimson);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -1105,7 +1108,7 @@ body.newspaper-theme.full-viewport {
   margin-top: 50px;
   background-color: var(--bg-card);
   border: 2px solid var(--ink-wine);
-  box-shadow: 6px 6px 0 var(--mustard-ferpizz);
+  box-shadow: 6px 6px 0 var(--mustard-deep);
   padding: 30px;
 }
 
@@ -1141,15 +1144,15 @@ body.newspaper-theme.full-viewport {
 }
 
 .additions-editorial-table th {
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
+  background-color: var(--mustard-deep);
+  color: var(--white-pure);
   padding: 12px 16px;
   text-align: left;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border: 1px solid var(--border-mustard);
+  border: 1px solid var(--mustard-deep);
 }
 
 .additions-editorial-table td {
@@ -1159,7 +1162,7 @@ body.newspaper-theme.full-viewport {
 }
 
 /* ========================================================
-   "COOK'S NOTE" & SLOGAN BANNER (BLOQUE ROJO Y MOSTAZA)
+   "COOK'S NOTE" & SLOGAN BANNER (BLOQUE POMODORO & OLIVA)
    ======================================================== */
 .cooks-banner-section {
   padding: 40px 0;
@@ -1169,12 +1172,12 @@ body.newspaper-theme.full-viewport {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   border: 2px solid var(--ink-wine);
-  box-shadow: 8px 8px 0 var(--mustard-ferpizz);
+  box-shadow: 8px 8px 0 var(--mustard-deep);
   overflow: hidden;
 }
 
 .cooks-red-panel {
-  background: linear-gradient(135deg, var(--accent-crimson), #9a1217);
+  background: linear-gradient(135deg, var(--accent-crimson), #741E18);
   color: var(--white-pure);
   padding: 50px 44px;
   display: flex;
@@ -1188,7 +1191,7 @@ body.newspaper-theme.full-viewport {
   gap: 10px;
   font-size: 0.74rem;
   letter-spacing: 0.2em;
-  color: var(--mustard-ferpizz);
+  color: var(--sage-soft);
   margin-bottom: 18px;
   text-transform: uppercase;
   font-weight: 800;
@@ -1231,7 +1234,7 @@ body.newspaper-theme.full-viewport {
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.16em;
-  color: var(--mustard-ferpizz);
+  color: var(--sage-soft);
   text-transform: uppercase;
   margin-top: 4px;
   display: block;
@@ -1320,10 +1323,10 @@ body.newspaper-theme.full-viewport {
 }
 
 .contact-lead-phone {
-  background-color: var(--mustard-ferpizz);
-  border: 1.5px solid var(--ink-wine);
+  background-color: var(--sage-soft);
+  border: 1.5px solid var(--mustard-deep);
   padding: 14px 18px;
-  box-shadow: 3px 3px 0 var(--ink-wine);
+  box-shadow: 3px 3px 0 var(--mustard-deep);
 }
 
 .phone-label {
@@ -1331,7 +1334,7 @@ body.newspaper-theme.full-viewport {
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: var(--ink-wine);
+  color: var(--mustard-deep);
   margin-bottom: 4px;
 }
 
@@ -1346,7 +1349,7 @@ body.newspaper-theme.full-viewport {
 }
 
 .phone-big-link:hover {
-  color: var(--ink-wine);
+  color: var(--mustard-deep);
 }
 
 .info-block-row {
@@ -1392,7 +1395,7 @@ body.newspaper-theme.full-viewport {
 .insta-follow-btn:hover {
   background-color: var(--accent-crimson);
   color: var(--white-pure);
-  box-shadow: 2px 2px 0 var(--mustard-ferpizz);
+  box-shadow: 2px 2px 0 var(--mustard-deep);
 }
 
 /* FLYER ORIGINAL PREVIEW */
@@ -1412,7 +1415,7 @@ body.newspaper-theme.full-viewport {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
   margin-bottom: 16px;
   overflow: hidden;
-  background-color: var(--mustard-ferpizz);
+  background-color: var(--bg-card);
 }
 
 .original-flyer-img {
@@ -1435,13 +1438,13 @@ body.newspaper-theme.full-viewport {
 }
 
 /* ========================================================
-   PIE DE PÁGINA OFICIAL FER PIZZ
+   PIE DE PÁGINA OFICIAL FORNO ARTIGIANO
    ======================================================== */
 .official-brand-footer {
-  background: linear-gradient(135deg, var(--ink-wine), #2B0A0C);
+  background: linear-gradient(135deg, var(--ink-wine), #10241B);
   color: var(--white-pure);
   padding: 50px 0 0;
-  border-top: 4px solid var(--mustard-ferpizz);
+  border-top: 4px solid var(--accent-crimson);
 }
 
 .footer-content {
@@ -1466,7 +1469,7 @@ body.newspaper-theme.full-viewport {
   font-family: var(--font-headline);
   font-size: 2.2rem;
   font-weight: 900;
-  color: var(--mustard-ferpizz);
+  color: var(--white-pure);
   letter-spacing: 0.06em;
 }
 
@@ -1491,7 +1494,7 @@ body.newspaper-theme.full-viewport {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--mustard-ferpizz);
+  color: var(--sage-soft);
   margin-bottom: 16px;
 }
 
@@ -1509,7 +1512,7 @@ body.newspaper-theme.full-viewport {
   transition: color var(--trans-fast);
 }
 .footer-links a:hover {
-  color: var(--mustard-ferpizz);
+  color: var(--red-bright);
   text-decoration: underline;
 }
 
@@ -1532,7 +1535,7 @@ body.newspaper-theme.full-viewport {
 .stamp-serrated-border {
   width: 96px;
   height: 116px;
-  background-color: var(--mustard-ferpizz);
+  background-color: var(--sage-soft);
   border: 2px dashed var(--ink-wine);
   padding: 5px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.35);
@@ -1714,8 +1717,8 @@ body.newspaper-theme.full-viewport {
 
 .toppings-header {
   padding: 24px 28px 18px;
-  background: linear-gradient(135deg, var(--mustard-ferpizz), #F9CB56);
-  border-bottom: 2.5px solid var(--ink-wine);
+  background: linear-gradient(135deg, var(--mustard-deep), #11261D);
+  border-bottom: 2.5px solid var(--accent-crimson);
   position: relative;
   text-align: center;
 }
@@ -1728,12 +1731,12 @@ body.newspaper-theme.full-viewport {
   border: none;
   font-size: 1.8rem;
   line-height: 1;
-  color: var(--ink-wine);
+  color: var(--white-pure);
   cursor: pointer;
   transition: color var(--trans-fast);
 }
 .toppings-close-btn:hover {
-  color: var(--accent-crimson);
+  color: var(--red-bright);
 }
 
 .toppings-kicker-tag {
@@ -1742,7 +1745,7 @@ body.newspaper-theme.full-viewport {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent-crimson);
+  color: var(--red-bright);
   margin-bottom: 4px;
 }
 
@@ -1750,7 +1753,7 @@ body.newspaper-theme.full-viewport {
   font-family: var(--font-headline);
   font-size: 1.7rem;
   font-weight: 900;
-  color: var(--ink-wine);
+  color: var(--white-pure);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   line-height: 1.1;
@@ -1760,13 +1763,13 @@ body.newspaper-theme.full-viewport {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--ink-charcoal);
+  color: var(--sage-soft);
   margin-top: 4px;
 }
 
 .toppings-base-pill {
   display: inline-block;
-  background-color: var(--ink-wine);
+  background-color: var(--accent-crimson);
   color: #FFF;
   font-size: 0.76rem;
   font-weight: 800;
@@ -2047,7 +2050,7 @@ body.newspaper-theme.full-viewport {
   background-color: var(--bg-card);
   position: relative;
   text-align: center;
-  border-bottom: 2px solid var(--mustard-deep);
+  border-bottom: 2px solid var(--accent-crimson);
 }
 
 .receipt-close-btn {
@@ -2070,9 +2073,9 @@ body.newspaper-theme.full-viewport {
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.16em;
-  color: var(--ink-wine);
-  background-color: var(--mustard-ferpizz);
-  border: 1px solid var(--ink-wine);
+  color: var(--mustard-deep);
+  background-color: var(--sage-soft);
+  border: 1px solid var(--mustard-deep);
   padding: 3px 8px;
   margin-bottom: 8px;
 }
@@ -2167,7 +2170,7 @@ body.newspaper-theme.full-viewport {
 .receipt-item-remove-btn {
   background: none;
   border: none;
-  color: #9c2828;
+  color: var(--accent-crimson);
   font-size: 0.7rem;
   font-weight: 700;
   cursor: pointer;
@@ -2210,10 +2213,10 @@ body.newspaper-theme.full-viewport {
 
 .free-badge {
   font-size: 0.68rem;
-  background-color: var(--mustard-ferpizz);
+  background-color: var(--sage-soft);
   padding: 2px 6px;
-  border: 1px solid var(--ink-wine);
-  color: var(--ink-wine);
+  border: 1px solid var(--mustard-deep);
+  color: var(--mustard-deep);
   font-weight: 800;
 }
 
@@ -2263,12 +2266,12 @@ body.newspaper-theme.full-viewport {
 }
 
 .btn-geo-locate {
-  background: var(--mustard-ferpizz);
-  border: 1px solid var(--ink-wine);
+  background: var(--sage-soft);
+  border: 1px solid var(--mustard-deep);
   padding: 3px 8px;
   font-size: 0.68rem;
   font-weight: 800;
-  color: var(--ink-wine);
+  color: var(--mustard-deep);
   cursor: pointer;
 }
 
@@ -2374,8 +2377,8 @@ body.newspaper-theme.full-viewport {
 
 .admin-panel-header {
   padding: 18px 24px;
-  background-color: var(--mustard-ferpizz);
-  border-bottom: 2px solid var(--ink-wine);
+  background-color: var(--mustard-deep);
+  border-bottom: 2px solid var(--accent-crimson);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2395,13 +2398,13 @@ body.newspaper-theme.full-viewport {
   font-family: var(--font-headline);
   font-size: 1.45rem;
   font-weight: 900;
-  color: var(--ink-wine);
+  color: var(--white-pure);
   margin-top: 4px;
 }
 
 .admin-sub {
   font-size: 0.76rem;
-  color: var(--ink-charcoal);
+  color: var(--sage-soft);
 }
 
 .admin-close-btn {
@@ -2409,7 +2412,7 @@ body.newspaper-theme.full-viewport {
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: var(--ink-wine);
+  color: var(--white-pure);
 }
 
 .admin-auth-view {
@@ -2510,11 +2513,11 @@ body.newspaper-theme.full-viewport {
   font-size: 0.82rem;
 }
 .admin-pizza-table th {
-  background-color: var(--mustard-ferpizz);
-  color: var(--ink-wine);
+  background-color: var(--mustard-deep);
+  color: var(--white-pure);
   padding: 10px 12px;
   text-align: left;
-  border: 1px solid var(--border-mustard);
+  border: 1px solid var(--mustard-deep);
 }
 .admin-pizza-table td {
   padding: 8px 12px;
@@ -2536,9 +2539,9 @@ body.newspaper-theme.full-viewport {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background-color: var(--ink-wine);
-  color: var(--mustard-ferpizz);
-  border: 2px solid var(--mustard-deep);
+  background-color: var(--mustard-deep);
+  color: var(--white-pure);
+  border: 2px solid var(--accent-crimson);
   padding: 14px 28px;
   font-family: var(--font-sans);
   font-size: 0.86rem;
@@ -2630,7 +2633,7 @@ body.newspaper-theme.full-viewport {
     display: inline-flex;
     align-items: center;
     font-size: 0.60rem;
-    color: var(--mustard-ferpizz);
+    color: var(--red-bright);
     line-height: 1;
   }
   .topbar-text {
@@ -2686,10 +2689,10 @@ body.newspaper-theme.full-viewport {
   .pill-btn-nav, .pill-btn-subtle, .pill-btn-cart {
     padding: 6px 14px;
     font-size: 0.70rem;
-    box-shadow: 2px 2px 0 var(--mustard-ferpizz);
+    box-shadow: 2px 2px 0 var(--mustard-deep);
   }
 
-  /* 3. MARQUESINA MOSTAZA FLUIDA */
+  /* 3. MARQUESINA DE LA CASA FLUIDA */
   .marquee-mustard-wrapper {
     padding: 5px 0;
   }
@@ -2755,7 +2758,7 @@ body.newspaper-theme.full-viewport {
   }
   .framed-photo-card {
     padding: 8px 8px 12px;
-    box-shadow: 0 10px 24px rgba(26, 22, 21, 0.12), 3px 3px 0 var(--mustard-ferpizz);
+    box-shadow: 0 10px 24px rgba(26, 22, 21, 0.12), 3px 3px 0 var(--mustard-deep);
   }
   .editorial-main-img {
     height: 280px;
