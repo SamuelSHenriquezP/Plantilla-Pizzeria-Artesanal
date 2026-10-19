@@ -19,32 +19,27 @@
 </head>
 <body class="newspaper-theme full-viewport">
 
-  <!-- TOPBAR EDITORIAL UNIFICADA (ELEGANTE, SIN DOBLE AMARILLO) -->
+  <!-- TOPBAR EDITORIAL UNIFICADA (ELEGANTE, SIN DESBORDES) -->
   <div class="unified-editorial-topbar">
     <div class="site-container topbar-flex">
       <div class="topbar-left">
         <span class="badge-oven">🔥 HORNO ENCENDIDO</span>
         <span class="topbar-sep">✦</span>
-        <span class="topbar-text">HORNO DE LEÑA & TRADICIÓN</span>
+        <span class="topbar-text">HORNO DE LEÑA & MASA MADRE</span>
         <span class="topbar-sep desktop-only">✦</span>
         <span class="topbar-date desktop-only" id="currentDateDisplay">EDICIÓN DE HOY</span>
       </div>
-      <div class="topbar-center">
-        <span class="topbar-slogan">“TRADICIÓN, FUEGO & PASIÓN ARTESANAL”</span>
-      </div>
       <div class="topbar-right">
         <a href="https://wa.me/15550192834" target="_blank" rel="noopener noreferrer" class="topbar-contact-link">
-          📞 (555) 019-2834
+          <span>📞 PEDIDOS: (555) 019-2834</span>
         </a>
-        <span class="topbar-sep">✦</span>
-        <a href="https://instagram.com/fornoartigiano.pizza" target="_blank" rel="noopener noreferrer" class="topbar-contact-link">
-          @fornoartigiano.pizza
-        </a>
+        <span class="topbar-sep desktop-only">✦</span>
+        <span class="topbar-schedule desktop-only">LUN - DOM: 12:00 A 23:00</span>
       </div>
     </div>
   </div>
 
-  <!-- HEADER PRINCIPAL SIMÉTRICO CON LOGO ORIGINAL -->
+  <!-- HEADER PRINCIPAL SIMÉTRICO Y ELEGANTE -->
   <header class="editorial-header-fluid" id="mainHeader">
     <div class="site-container header-layout">
       
@@ -58,7 +53,7 @@
           <span>TAMAÑOS</span>
         </a>
         <a href="#horarios-section" class="pill-btn-subtle">
-          <span>CONTACTO</span>
+          <span>HORNO & HISTORIA</span>
         </a>
       </nav>
 
@@ -70,18 +65,21 @@
               src="logo.png" 
               alt="Logo Oficial Forno Artigiano - Pizzería Artigianale" 
               class="official-logo-img"
-              width="130"
-              height="130"
+              width="120"
+              height="120"
             />
           </div>
         </a>
         <p class="brand-tagline">Pizzeria Artigianale — Forno a Legna</p>
       </div>
 
-      <!-- LADO DERECHO: BOTÓN DE PEDIDO INTERACTIVO -->
+      <!-- LADO DERECHO: CONTACTO Y CARRITO -->
       <div class="header-nav-group right-nav">
+        <a href="#horarios-section" class="pill-btn-subtle desktop-only">
+          <span>CONTACTO</span>
+        </a>
         <button id="cartTriggerBtn" class="pill-btn-cart" aria-label="Ver carrito de compras">
-          <span class="cart-spin-icon">✹</span>
+          <span class="cart-spin-icon">🛒</span>
           <span class="cart-label">PEDIDO</span>
           <span class="cart-badge-counter" id="cartCountBadge">(0)</span>
         </button>
@@ -493,18 +491,20 @@
     </div>
   </footer>
 
-  <!-- BARRA FLOTANTE MÓVIL (QUICK CART ACCESS EN SMARTPHONES) -->
-  <aside class="mobile-sticky-order-bar" id="mobileStickyBar">
-    <div class="sticky-bar-content">
-      <div class="sticky-order-info">
-        <span class="sticky-title">TU PEDIDO:</span>
-        <span class="sticky-total" id="mobileStickyTotal">$0 COP</span>
+  <!-- BOTÓN FLOTANTE PERMANENTE DE CARRITO (SIEMPRE VISIBLE EN TODAS LAS PANTALLAS) -->
+  <div class="universal-floating-cart-wrapper" id="universalFloatingCart">
+    <button type="button" class="floating-cart-action-btn" id="floatingCartBtn" aria-label="Abrir carrito de compras">
+      <div class="floating-cart-icon-badge">
+        <span class="floating-cart-emoji">🛒</span>
+        <span class="floating-badge-counter" id="floatingCartBadge">0</span>
       </div>
-      <button type="button" class="btn-sticky-checkout" id="mobileCartOpenBtn">
-        <span>VER CARRITO 🛒</span>
-      </button>
-    </div>
-  </aside>
+      <div class="floating-cart-text-wrap">
+        <span class="floating-cart-heading">MI PEDIDO</span>
+        <span class="floating-cart-subtotal" id="floatingCartTotal">$0 COP</span>
+      </div>
+      <span class="floating-cart-arrow">➔</span>
+    </button>
+  </div>
 
   <!-- ======================================================== -->
   <!-- MODAL DESPLEGABLE / DRAWER DE TOPPINGS & PERSONALIZACIÓN -->

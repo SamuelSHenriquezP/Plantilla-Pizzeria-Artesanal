@@ -698,7 +698,7 @@
     showToast(`✓ Se agregó ${modalCustomState.quantity}x «${pizza.name}» (${SIZES[sizeKey].label}) al carrito`);
   }
 
-  // ACTUALIZAR BADGES Y BARRA MÓVIL
+  // ACTUALIZAR BADGES Y BOTÓN FLOTANTE PERMANENTE
   function updateCartBadges() {
     const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
     const subtotal = cart.reduce((acc, item) => acc + (item.unitPrice * item.quantity), 0);
@@ -715,6 +715,23 @@
         badge.style.transform = 'scale(1.25)';
         setTimeout(() => badge.style.transform = 'scale(1)', 250);
       }
+    }
+
+    const floatingBadge = document.getElementById('floatingCartBadge');
+    if (floatingBadge) {
+      floatingBadge.textContent = totalCount;
+    }
+
+    const floatingTotal = document.getElementById('floatingCartTotal');
+    if (floatingTotal) {
+      floatingTotal.textContent = formatCOP(subtotal);
+    }
+
+    const floatingBtn = document.getElementById('floatingCartBtn');
+    if (floatingBtn && totalCount > 0) {
+      floatingBtn.classList.remove('floating-cart-pulse');
+      void floatingBtn.offsetWidth;
+      floatingBtn.classList.add('floating-cart-pulse');
     }
 
     const mobileTotal = document.getElementById('mobileStickyTotal');
@@ -792,10 +809,12 @@
   // 4. DRAWER DE CHECKOUT
   function setupCartDrawer() {
     const triggerBtn = document.getElementById('cartTriggerBtn');
+    const floatingBtn = document.getElementById('floatingCartBtn');
     const backdrop = document.getElementById('checkoutBackdrop');
     const closeBtn = document.getElementById('closeCartBtn');
 
     if (triggerBtn) triggerBtn.addEventListener('click', openCartDrawer);
+    if (floatingBtn) floatingBtn.addEventListener('click', openCartDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeCartDrawer);
     if (backdrop) {
       backdrop.addEventListener('click', e => {
