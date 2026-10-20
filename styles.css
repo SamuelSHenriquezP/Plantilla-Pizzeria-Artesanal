@@ -306,6 +306,25 @@ body.newspaper-theme.full-viewport {
   letter-spacing: 0.08em;
 }
 
+.header-dev-credit {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-wine);
+  opacity: 0.65;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.footer-inventus-credit {
+  color: var(--mustard);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* ========================================================
    MARQUESINA INFINITA (TRATTORIA VERDE BOSQUE & POMODORO)
    ======================================================== */
